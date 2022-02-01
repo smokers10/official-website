@@ -2,13 +2,13 @@ package encryption
 
 import "golang.org/x/crypto/bcrypt"
 
-type bcryptEncryption struct{}
+type BcryptEncryption struct{}
 
-func Bcrypt() *bcryptEncryption {
-	return &bcryptEncryption{}
+func Bcrypt() *BcryptEncryption {
+	return &BcryptEncryption{}
 }
 
-func (be *bcryptEncryption) Hash(plaintText string) (string, error) {
+func (be *BcryptEncryption) Hash(plaintText string) (string, error) {
 	hashed, err := bcrypt.GenerateFromPassword([]byte(plaintText), 10)
 	if err != nil {
 		return "", err
@@ -17,7 +17,7 @@ func (be *bcryptEncryption) Hash(plaintText string) (string, error) {
 	return string(hashed), nil
 }
 
-func (be *bcryptEncryption) Compare(hashed string, plaintext string) bool {
+func (be *BcryptEncryption) Compare(hashed string, plaintext string) bool {
 	if err := bcrypt.CompareHashAndPassword([]byte(hashed), []byte(plaintext)); err != nil {
 		return false
 	}

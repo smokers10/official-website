@@ -44,7 +44,7 @@ func ReadConfig() *configuration {
 	result := configuration{}
 
 	// on unit testing change file dir to ../../app.config.json
-	raw, err := ioutil.ReadFile("../../app.config.json")
+	raw, err := ioutil.ReadFile("app.config.json")
 	if err != nil {
 		panic(err)
 	}

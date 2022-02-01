@@ -7,7 +7,7 @@ import (
 	config "github.com/smokers10/official-website.git/libraries"
 )
 
-type jwonWebToken struct {
+type JwonWebToken struct {
 	Payload Payload
 }
 
@@ -17,11 +17,11 @@ type Payload struct {
 	IsLogged bool
 }
 
-func JsonWebToken(payload *Payload) *jwonWebToken {
-	return &jwonWebToken{Payload: *payload}
+func JsonWebToken(payload *Payload) *JwonWebToken {
+	return &JwonWebToken{Payload: *payload}
 }
 
-func (j *jwonWebToken) Sign() (string, error) {
+func (j *JwonWebToken) Sign() (string, error) {
 	config := config.ReadConfig().Application
 
 	claims := jwt.MapClaims{
@@ -40,7 +40,7 @@ func (j *jwonWebToken) Sign() (string, error) {
 	return tokenString, err
 }
 
-func (j *jwonWebToken) Verificate(tokenString string) (*Payload, error) {
+func (j *JwonWebToken) Verificate(tokenString string) (*Payload, error) {
 	payload := j.Payload
 	config := config.ReadConfig().Application
 

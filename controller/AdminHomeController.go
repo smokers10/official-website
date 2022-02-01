@@ -1,13 +1,17 @@
 package controller
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+)
 
-type adminHomeController struct{}
-
-func (mc *MainController) AdminHomeController() *adminHomeController {
-	return &adminHomeController{}
+type adminHomeController struct {
+	MainController *MainController
 }
 
-func (ahc *adminHomeController) HomePage(c *fiber.Ctx) error {
+func (mc *MainController) AdminHomeController() *adminHomeController {
+	return &adminHomeController{MainController: mc}
+}
+
+func (a *adminHomeController) HomePage(c *fiber.Ctx) error {
 	return c.Render("admin/home", nil)
 }
