@@ -9,5 +9,5 @@ func (mc *MainController) IndexController() *indexController {
 }
 
 func (idx *indexController) Index(c *fiber.Ctx) error {
-	return c.Render("index", nil)
+	return c.Render("front/beranda", nil, "layouts/front")
 }
