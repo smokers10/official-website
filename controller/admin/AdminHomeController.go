@@ -1,4 +1,4 @@
-package controller
+package admin
 
 import (
 	"github.com/gofiber/fiber/v2"
@@ -13,5 +13,5 @@ func (mc *MainController) AdminHomeController() *adminHomeController {
 }
 
 func (a *adminHomeController) HomePage(c *fiber.Ctx) error {
-	return c.Render("admin/home", nil)
+	return c.Render("admin/home", nil, "layouts/admin")
 }
