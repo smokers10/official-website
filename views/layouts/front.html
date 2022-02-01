@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Asyncrode Official</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Asyncrode Official">
+    <meta name="keywords" content="html, css, javascript, jquery">
+    <meta name="author" content="Unslate.co">
+
+    <link rel="stylesheet" href="/front/css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="/front/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="/front/css/vendor/aos.css">
+    <link rel="stylesheet" href="/front/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="/front/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/front/css/vendor/jquery.fancybox.min.css">
+    
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="/front/css/style.css">
+
+  </head>
+  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <nav class="unslate_co--site-mobile-menu">
+      <div class="close-wrap d-flex">
+        <a href="#" class="d-flex ml-auto js-menu-toggle">
+          <span class="close-label">Close</span>
+          <div class="close-times">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+          </div>
+        </a>
+      </div>
+      <div class="site-mobile-inner"></div>
+    </nav>
+
+
+    <div class="unslate_co--site-wrap">
+
+      <div class="unslate_co--site-inner">
+
+        <div class="lines-wrap">
+          <div class="lines-inner">
+            <div class="lines"></div>
+          </div>
+        </div>
+        <!-- END lines -->
+      
+        {{template "partials/frontNavbar" .}}
+      <!-- END nav -->
+      
+        <!-- Main -->
+        {{embed}}
+        <!-- End Main -->
+        
+      </div>
+
+      {{template "partials/frontFooter" .}}
+      <!-- End Footer -->
+
+      
+    </div>
+
+    <!-- Loader -->
+    <div id="unslate_co--overlayer"></div>
+    <div class="site-loader-wrap">
+      <div class="site-loader dark"></div>
+    </div>
+
+    <script src="/front/js/scripts-dist.js"></script>
+    <script src="/front/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157808202-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-157808202-1');
+</script>
+
+  </body>
+</html>
