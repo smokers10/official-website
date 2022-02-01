@@ -4,7 +4,10 @@ go 1.17
 
 require github.com/gofiber/template v1.6.21
 
-require github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
+require (
+	github.com/gofiber/storage/mysql v0.0.0-20220125143652-1883d62d065a // indirect
+	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.2 // indirect

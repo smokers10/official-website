@@ -88,8 +88,11 @@ github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5x
 github.com/gofiber/fiber/v2 v2.24.0/go.mod h1:MR1usVH3JHYRyQwMe2eZXRSZHRX38fkV+A7CPB+DlDQ=
 github.com/gofiber/fiber/v2 v2.25.0 h1:kv8dmG/sAFDFpTueCMEn4X0JS5d72pEFTKLZ3miOREw=
 github.com/gofiber/fiber/v2 v2.25.0/go.mod h1:7efVWcBOZi1PyMWznnbitjnARPA7nYZxmQXJVod0bo0=
+github.com/gofiber/storage/mysql v0.0.0-20220125143652-1883d62d065a h1:IfWAWR0HLt0eh5mjjIAY94cDQFBLldwJDS7q0qmINEU=
+github.com/gofiber/storage/mysql v0.0.0-20220125143652-1883d62d065a/go.mod h1:We6ky6rxW64XHR6FN2yH0y4u6D7JLQNtFiUWmuvWp6U=
 github.com/gofiber/template v1.6.21 h1:oIqrnpHnCWhbdBIme5AHBsM7c93H2vrb6Xyloj7UZoU=
 github.com/gofiber/template v1.6.21/go.mod h1:1ORcy7sg3WW/YVeAyeGkcCtT63HjEj3+qxHNz+oZoFk=
+github.com/gofiber/utils v0.1.2/go.mod h1:pacRFtghAE3UoknMOUiXh2Io/nLWSUHtQCi/3QASsOc=
 github.com/gogo/protobuf v1.3.2/go.mod h1:P1XiOD3dCwIKUDQYPy72D8LYyHL2YPYrpS2s69NZV8Q=
 github.com/golang-jwt/jwt v3.2.2+incompatible h1:IfV12K8xAKAnZqdXVzCZ+TOjboZ2keLg81eXfW3O+oY=
 github.com/golang-jwt/jwt v3.2.2+incompatible/go.mod h1:8pz2t5EyA70fFQQSrl6XZXzqecmYZeUEB8OUGHkxJ+I=
