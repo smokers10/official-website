@@ -2,10 +2,12 @@ package controller
 
 import "github.com/gofiber/fiber/v2"
 
-type authController struct{}
+type authController struct {
+	mainController *MainController
+}
 
 func (mc *MainController) AuthController() *authController {
-	return &authController{}
+	return &authController{mainController: mc}
 }
 
 func (ac *authController) LoginPage(c *fiber.Ctx) error {
