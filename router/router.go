@@ -15,11 +15,11 @@ func RouterGet(app *fiber.App, session *session.Store) {
 	// index page
 	app.Get("/", controllerFront.IndexController().Index)
 
-	// Admin
-	adminGroup := app.Group("/admin")
-
 	// Admin - Authentication
-	adminGroup.Get("/login", controllerAdmin.AuthController().LoginPage)
+	app.Get("/admin/login", Guest(session), controllerAdmin.AuthController().LoginPage)
+
+	// Admin
+	adminGroup := app.Group("/admin", AdminOnly(session))
 
 	// Admin - Dashboard
 	adminGroup.Get("/home", controllerAdmin.AdminHomeController().HomePage)

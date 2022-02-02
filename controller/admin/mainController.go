@@ -29,5 +29,5 @@ func (mc *MainController) session() *session.Store {
 }
 
 func (mc *MainController) jwt(payload *jwt.Payload) *jwt.JwonWebToken {
-	return jwt.JsonWebToken(payload)
+	return jwt.Init(payload)
 }

@@ -17,7 +17,7 @@ type Payload struct {
 	IsLogged bool
 }
 
-func JsonWebToken(payload *Payload) *JwonWebToken {
+func Init(payload *Payload) *JwonWebToken {
 	return &JwonWebToken{Payload: *payload}
 }
 

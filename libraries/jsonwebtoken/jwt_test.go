@@ -9,7 +9,7 @@ func TestSign(t *testing.T) {
 		IsLogged: true,
 	}
 
-	token, err := JsonWebToken(payload).Sign()
+	token, err := Init(payload).Sign()
 	if err != nil {
 		t.Errorf("Sign FAILED \n")
 		t.Error(err)
@@ -25,7 +25,7 @@ func TestSign(t *testing.T) {
 }
 
 func TestVerificate(t *testing.T) {
-	jwt := JsonWebToken(&Payload{})
+	jwt := Init(&Payload{})
 	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIklEIjoxLCJJc0xvZ2dlZCI6dHJ1ZX0.O1d6ndbpW8XUMXOqADBB8lTL5fbMU2irlbaOMqaMByc"
 
 	claims, err := jwt.Verificate(token)
@@ -44,7 +44,7 @@ func TestVerificate(t *testing.T) {
 func BenchmarkTestVerificate(b *testing.B) {
 	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIklEIjoxLCJJc0xvZ2dlZCI6dHJ1ZX0.O1d6ndbpW8XUMXOqADBB8lTL5fbMU2irlbaOMqaMByc"
 	for i := 0; i < b.N; i++ {
-		JsonWebToken(&Payload{}).Verificate(token)
+		Init(&Payload{}).Verificate(token)
 	}
 }
 
@@ -56,6 +56,6 @@ func BenchmarkSign(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		JsonWebToken(payload).Sign()
+		Init(payload).Sign()
 	}
 }
